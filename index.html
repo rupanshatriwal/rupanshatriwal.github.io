@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rupansh Atriwal | Financial Analyst & Strategy Consultant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .gradient-text {
+            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+        .img-placeholder {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #e2e8f0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .modal-hidden {
+            display: none;
+        }
+        .modal-visible {
+            display: flex;
+        }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="text-xl font-bold tracking-tighter text-blue-900">Rupansh Atriwal</span>
+            <div class="space-x-8 hidden md:flex font-medium text-sm uppercase tracking-widest text-slate-600">
+                <a href="#about" class="hover:text-blue-600">About</a>
+                <a href="#experience" class="hover:text-blue-600">Experience</a>
+                <a href="#projects" class="hover:text-blue-600">Projects</a>
+                <a href="#portfolio" class="hover:text-blue-600">Portfolio</a>
+                <a href="#certifications" class="hover:text-blue-600">Certifications</a>
+                <a href="#contact" class="hover:text-blue-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <img
+                src="images/profile.jpg"
+                alt="Rupansh Atriwal"
+                class="img-placeholder mx-auto mb-8"
+                style="object-fit: cover;"
+            >
+
+            <span class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Available for Financial Analyst & Strategy Consultant Roles</span>
+            <h1 class="text-5xl md:text-7xl font-bold mt-6 mb-6 leading-tight">
+                Driving Growth through <span class="gradient-text">Financial Intelligence.</span>
+            </h1>
+            <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-3xl mx-auto">
+                MSc Management student at the University of Manchester with 2 years of experience delivering measurable commercial impact across financial analysis, strategy consulting, and client-facing engagements - across real estate, fintech, and SME operating model contexts.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="assets/Rupansh_Atriwal_CV_2026.pdf" target="_blank" class="bg-blue-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-800 transition flex items-center gap-2">
+                    <i class="fa-solid fa-file-pdf"></i> Download CV
+                </a>
+                <a href="#projects" class="bg-white border border-slate-300 text-slate-700 px-8 py-4 rounded-lg font-semibold hover:bg-slate-50 transition">View Case Studies</a>
+                <button onclick="openContactModal()" class="border border-slate-300 px-8 py-4 rounded-lg font-semibold hover:bg-slate-100 transition">Contact Me</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats/Impact Section -->
+    <section class="bg-blue-900 py-16 text-white">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <p class="text-4xl font-bold">55%</p>
+                <p class="text-blue-300 text-sm">Client Retention Uplift</p>
+            </div>
+            <div>
+                <p class="text-4xl font-bold">92%</p>
+                <p class="text-blue-300 text-sm">Forecast Prediction Accuracy</p>
+            </div>
+            <div>
+                <p class="text-4xl font-bold">₹3L+</p>
+                <p class="text-blue-300 text-sm">Billing Discrepancies Found</p>
+            </div>
+            <div>
+                <p class="text-4xl font-bold">7%</p>
+                <p class="text-blue-300 text-sm">YoY Cost Reduction</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="about" class="py-24 px-6 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-3xl font-bold mb-6 text-blue-900">Core Competencies</h2>
+                <p class="text-slate-600 mb-8 leading-relaxed">
+                    Specialized in structuring ambiguous financial problems using hypothesis-driven frameworks (MECE Issue-Tree, Root Cause Diagnostics). Experienced in billing analysis, variance testing, financial modelling & valuation, and strategic operating model design.
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-chart-line text-blue-600"></i>
+                        <span class="font-medium">Financial Modelling & Valuation</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-database text-blue-600"></i>
+                        <span class="font-medium">Power BI & SQL Dashboards</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-file-invoice-dollar text-blue-600"></i>
+                        <span class="font-medium">Billing & Variance Analysis</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-magnifying-glass-chart text-blue-600"></i>
+                        <span class="font-medium">Hypothesis-Driven Problem Solving</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 card-hover">
+                    <i class="fa-brands fa-python text-3xl mb-4 text-blue-500"></i>
+                    <h3 class="font-bold">Python</h3>
+                    <p class="text-xs text-slate-500">Pandas / NumPy</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 card-hover">
+                    <i class="fa-solid fa-table text-3xl mb-4 text-green-600"></i>
+                    <h3 class="font-bold">Advanced Excel</h3>
+                    <p class="text-xs text-slate-500">Macros, Pivot Tables, Dashboards</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 card-hover">
+                    <i class="fa-solid fa-chart-simple text-3xl mb-4 text-orange-500"></i>
+                    <h3 class="font-bold">Power BI</h3>
+                    <p class="text-xs text-slate-500">Interactive KPI Dashboards</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 card-hover">
+                    <i class="fa-solid fa-diagram-project text-3xl mb-4 text-purple-500"></i>
+                    <h3 class="font-bold">Strategy</h3>
+                    <p class="text-xs text-slate-500">PESTLE, Porter's 5, Value Chain</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-24 bg-slate-100 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center text-blue-900">Key Consulting Projects</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Project 1: Auditsu -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md card-hover">
+                    <div class="h-48 bg-blue-800 flex items-center justify-center text-white relative">
+                        <i class="fa-solid fa-briefcase text-6xl opacity-20"></i>
+                        <span class="absolute text-xl font-bold">Auditsu, UK</span>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-3">Strategy & Growth Consulting Engagement</h3>
+                        <p class="text-slate-600 text-sm mb-4">Embedded as lead analyst; applied Value Chain, PESTLE, Porter's Five Forces, and STP frameworks to diagnose underperforming operating model and GTM strategy. Delivered a 20-slide board-ready restructuring roadmap projecting 30% qualified pipeline uplift.</p>
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">GTM Strategy • Stakeholder Interviews • Value Proposition Redesign</span>
+                    </div>
+                </div>
+                <!-- Project 2: SME Diagnostic -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md card-hover">
+                    <div class="h-48 bg-slate-800 flex items-center justify-center text-white relative">
+                        <i class="fa-solid fa-stethoscope text-6xl opacity-20"></i>
+                        <span class="absolute text-xl font-bold">SME Diagnostic</span>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-3">Financial Health Diagnostic</h3>
+                        <p class="text-slate-600 text-sm mb-4">Self-initiated pro-bono consulting engagement; executed full financial health diagnostic across ratio analysis, breakeven modelling, PESTLE risk register, and operating model assessment. Reduced client working capital cycle by 18 days and improved gross margin by 6pp.</p>
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Financial Ratios • Cash Flow Optimization • Breakeven Modelling</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="py-24 px-6 max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12 text-blue-900">Professional Experience</h2>
+        <div class="space-y-12 border-l-2 border-slate-200 pl-8 relative">
+
+            <!-- Job 1: Makewell Buildtech -->
+            <div class="relative">
+                <div class="absolute -left-10 mt-1 w-4 h-4 rounded-full bg-blue-600 border-4 border-white shadow"></div>
+                <h3 class="text-xl font-bold">Financial Analyst</h3>
+                <p class="text-blue-600 font-semibold mb-2">Makewell Buildtech Private Limited, India | Apr 2024 - Mar 2025</p>
+                <ul class="text-slate-600 space-y-2 text-sm">
+                    <li>• Redesigned the four-statement financial reporting suite and introduced proactive client advisory protocols; conducted due diligence across prospective development projects, driving a <strong>55% improvement in client retention</strong> and a <strong>12% increase in long-term profitability</strong>.</li>
+                    <li>• Applied structured cross-referencing methodology across all accounts and vendor reconciliations; maintained 99% accuracy and surfaced <strong>₹3L+ in billing discrepancies annually</strong>, directly improving cash-flow forecasting reliability.</li>
+                    <li>• Identified 6 manual reporting bottlenecks consuming ~20hrs/week; automated Excel workflows using dynamic formulas and macro-driven pipelines, <strong>reducing processing time by 80%</strong> and eliminating reconciliation errors across 20+ daily financial vouchers.</li>
+                    <li>• Conducted structured root-cause diagnostics and implemented targeted spend controls across 3 cost workstreams, delivering a <strong>7% YoY cost reduction</strong> while sustaining 89% operational efficiency.</li>
+                </ul>
+            </div>
+
+            <!-- Job 2: Pinterest Store -->
+            <div class="relative">
+                <div class="absolute -left-10 mt-1 w-4 h-4 rounded-full bg-slate-400 border-4 border-white shadow"></div>
+                <h3 class="text-xl font-bold">Founder</h3>
+                <p class="text-blue-600 font-semibold mb-2">The Pinterest Store | Jul 2023 - Mar 2024</p>
+                <ul class="text-slate-600 space-y-2 text-sm">
+                    <li>• Built and scaled a self-funded D2C brand to profitability within 6 months with full P&L ownership; executed data-driven campaign strategy, achieving <strong>72% conversion rate uplift</strong> through A/B testing, analytics, and structured content iteration across 450+ designs.</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section class="py-16 bg-white px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-blue-900">Education</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-slate-50 p-8 rounded-2xl shadow-sm card-hover">
+                    <h3 class="text-xl font-bold">MSc Management (Distinction Track)</h3>
+                    <p class="text-blue-600 font-semibold">University of Manchester | 2025 - 2026</p>
+                    <p class="text-slate-600 text-sm mt-3">Applied consulting frameworks (PESTLE, STP, Value Chain Analysis) across live case competitions; led peer team strategic analysis of Nintendo's global operating model.</p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-2xl shadow-sm card-hover">
+                    <h3 class="text-xl font-bold">BBA (First Class)</h3>
+                    <p class="text-blue-600 font-semibold">Devi Ahilya Vishwavidyalaya, Indore | 2020 - 2023</p>
+                    <p class="text-slate-600 text-sm mt-3">Developed quantitative data analysis and business communication skills; led cross-functional sustainability event coordination for 2 consecutive years, managing teams of 10+.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications" class="py-24 px-6 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12 text-center text-blue-900">Certifications & Professional Development</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 text-center card-hover">
+                <i class="fa-brands fa-python text-2xl mb-2 text-blue-500"></i>
+                <h3 class="font-semibold text-sm">Python</h3>
+                <p class="text-xs text-slate-500">Internshala</p>
+            </div>
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 text-center card-hover">
+                <i class="fa-solid fa-chart-simple text-2xl mb-2 text-orange-500"></i>
+                <h3 class="font-semibold text-sm">Power BI</h3>
+                <p class="text-xs text-slate-500">Internshala</p>
+            </div>
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 text-center card-hover">
+                <i class="fa-solid fa-coins text-2xl mb-2 text-green-600"></i>
+                <h3 class="font-semibold text-sm">Financial Modelling & Valuation</h3>
+                <p class="text-xs text-slate-500">Internshala</p>
+            </div>
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 text-center card-hover">
+                <i class="fa-solid fa-database text-2xl mb-2 text-purple-500"></i>
+                <h3 class="font-semibold text-sm">SQL</h3>
+                <p class="text-xs text-slate-500">IIT Madras</p>
+            </div>
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 text-center card-hover">
+                <i class="fa-solid fa-file-excel text-2xl mb-2 text-green-700"></i>
+                <h3 class="font-semibold text-sm">Advanced Excel with AI</h3>
+                <p class="text-xs text-slate-500">IIM Mumbai</p>
+            </div>
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 text-center card-hover">
+                <i class="fa-solid fa-chart-bar text-2xl mb-2 text-blue-600"></i>
+                <h3 class="font-semibold text-sm">Business Analytics</h3>
+                <p class="text-xs text-slate-500">IIT Madras</p>
+            </div>
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 text-center card-hover">
+                <i class="fa-solid fa-palette text-2xl mb-2 text-pink-500"></i>
+                <h3 class="font-semibold text-sm">UI/UX Design</h3>
+                <p class="text-xs text-slate-500">Coursera</p>
+            </div>
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 text-center card-hover">
+                <i class="fa-solid fa-shield text-2xl mb-2 text-red-500"></i>
+                <h3 class="font-semibold text-sm">Cyber Security</h3>
+                <p class="text-xs text-slate-500">Coursera</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio & Creative Works - UPDATED WITH CV CARD -->
+    <section id="portfolio" class="py-24 bg-slate-100 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center text-blue-900">Portfolio & Creative Works</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- GitHub Portfolio -->
+                <a href="https://github.com/rupanshatriwal" target="_blank" class="bg-white rounded-2xl overflow-hidden shadow-md card-hover hover:shadow-lg transition">
+                    <div class="h-48 bg-slate-800 flex items-center justify-center text-white relative">
+                        <i class="fa-brands fa-github text-6xl opacity-20"></i>
+                        <span class="absolute text-xl font-bold">GitHub Portfolio</span>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-3">Creative & Technical Work</h3>
+                        <p class="text-slate-600 text-sm mb-4">Explore my complete portfolio of technical projects, code repositories, and creative work. Includes Python scripts, data analysis tools, automation frameworks, and full-stack applications built throughout my professional journey.</p>
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Python • Data Analysis • Automation • Full Stack</span>
+                    </div>
+                </a>
+                <!-- CV Download Card (REPLACED INSTAGRAM) -->
+                <a href="assets/Rupansh_Atriwal_CV_2026.pdf" target="_blank" class="bg-white rounded-2xl overflow-hidden shadow-md card-hover hover:shadow-lg transition border-2 border-blue-100">
+                    <div class="h-48 bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center text-white relative">
+                        <i class="fa-solid fa-file-lines text-6xl opacity-20"></i>
+                        <span class="absolute text-xl font-bold">Professional CV / Resume</span>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-3">My Professional Background</h3>
+                        <p class="text-slate-600 text-sm mb-4">Download my latest CV detailing my experience in financial modelling, strategy consulting, and D2C brand growth. Optimized for Finance and Strategy Consultant roles in the UK.</p>
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Financial Modelling • Strategy • MECE • P&L Management</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-blue-900 text-white text-center px-6">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-3xl font-bold mb-6">Let's Discuss Strategy</h2>
+            <p class="text-blue-200 mb-10">Based in Manchester, UK — Open to Financial Analyst, Strategy Consultant, and Billing/Pricing Analyst opportunities.</p>
+            <div class="flex justify-center gap-8 text-2xl">
+                <a href="mailto:rupansh.atriwal@gmail.com" class="hover:text-blue-300 transition"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/rupanshatriwal" target="_blank" class="hover:text-blue-300 transition"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="tel:+447500972565" class="hover:text-blue-300 transition"><i class="fa-solid fa-phone"></i></a>
+            </div>
+            <p class="mt-12 text-blue-400 text-xs">© 2026 Rupansh Atriwal. Built for Financial Excellence.</p>
+        </div>
+    </section>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal-hidden fixed inset-0 bg-black/50 z-50 items-center justify-center p-6">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative">
+            <button onclick="closeContactModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600">
+                <i class="fa-solid fa-times text-2xl"></i>
+            </button>
+            <h2 class="text-2xl font-bold text-blue-900 mb-2">Get in Touch</h2>
+            <p class="text-slate-600 text-sm mb-8">Choose your preferred way to connect with me.</p>
+            
+            <div class="space-y-4">
+                <!-- Email Option -->
+                <a href="mailto:rupansh.atriwal@gmail.com" class="flex items-center gap-4 p-4 border border-slate-200 rounded-xl hover:bg-blue-50 hover:border-blue-300 transition">
+                    <div class="bg-blue-100 p-3 rounded-lg">
+                        <i class="fa-solid fa-envelope text-blue-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-slate-900">Email</h3>
+                        <p class="text-sm text-slate-500">rupansh.atriwal@gmail.com</p>
+                    </div>
+                </a>
+
+                <!-- Phone Option -->
+                <a href="tel:+447500972565" class="flex items-center gap-4 p-4 border border-slate-200 rounded-xl hover:bg-blue-50 hover:border-blue-300 transition">
+                    <div class="bg-green-100 p-3 rounded-lg">
+                        <i class="fa-solid fa-phone text-green-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-slate-900">Phone</h3>
+                        <p class="text-sm text-slate-500">+44 7500 972 565</p>
+                    </div>
+                </a>
+
+                <!-- LinkedIn Option -->
+                <a href="https://linkedin.com/in/rupanshatriwal" target="_blank" class="flex items-center gap-4 p-4 border border-slate-200 rounded-xl hover:bg-blue-50 hover:border-blue-300 transition">
+                    <div class="bg-blue-100 p-3 rounded-lg">
+                        <i class="fa-brands fa-linkedin text-blue-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-slate-900">LinkedIn</h3>
+                        <p class="text-sm text-slate-500">linkedin.com/in/rupanshatriwal</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Modal -->
+    <script>
+        function openContactModal() {
+            document.getElementById('contactModal').classList.remove('modal-hidden');
+            document.getElementById('contactModal').classList.add('modal-visible');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeContactModal() {
+            document.getElementById('contactModal').classList.add('modal-hidden');
+            document.getElementById('contactModal').classList.remove('modal-visible');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('contactModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeContactModal();
+            }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeContactModal();
+            }
+        });
+    </script>
+
+</body>
+</html>
